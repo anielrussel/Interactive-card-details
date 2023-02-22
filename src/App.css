@@ -1,0 +1,187 @@
+.bgDesktop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+}
+.bgMobile {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 10rem 0 10rem;
+    z-index: 1;
+}
+.app-container-cards {
+    display: flex;
+    flex-direction: column;
+}
+.card-front {
+    width: auto;
+}
+.card-back {
+    position: relative;
+    top: 2rem;
+    left: 5rem;
+}
+.app-container-form label {
+    display: flex;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.app-container-form-expiry {
+    display: flex;
+    gap: 1rem;
+}
+.year {
+    position: absolute;
+    margin-top: 1.7rem;
+    margin-left: 5rem;
+}
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
+}
+form input {
+    padding: 10px 0 10px 10px;
+    border: 2px solid var(--dark-grayish-violet);
+    border-radius: 5px;
+    outline: none;
+}
+form input:focus {
+    border: 2px solid transparent; /* Set the border to be transparent to allow the gradient to show through */
+    border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)); /* Set the border image to a linear gradient */
+    border-image-slice: 1;
+    border-radius: 5px!important;
+}
+form button {
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    border: none;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.month,
+.year {
+    width: 3rem;
+}
+.cards-front-details {
+    position: absolute;
+    margin: 2rem;
+}
+.cards-front-details img {
+    margin-bottom: 2rem;
+}
+.cards-front-details {
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+.cards-front-details-name {
+    display: flex;
+    margin-top: -1rem;
+}
+.time {
+    position: absolute;
+    margin-left: 20.5rem;
+}
+.back-number {
+    color: var(--white);
+    position: absolute;
+    margin: 9rem 0 0 28rem;
+    z-index: 1;
+}
+.form-submitted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5rem;
+    line-height: 10px;
+}
+.form-submitted img {
+    padding-bottom: 2rem;
+}
+.form-submitted button {
+    width: 20rem;
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    border: none;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1440px) {
+    .app-container {
+        padding: 10rem 10rem 0 10rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .bgDesktop {
+        display: none;
+    }
+    .bgMobile {
+        display: block;
+        height: 50%;
+    }
+    .app-container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2.5rem;
+    }
+    .app-container-cards {
+        flex-direction: column-reverse;
+    }
+    .card-back {
+        z-index: -1;
+    }
+    .card-front {
+        margin-top: -1rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .card-back {
+        left: 2rem;
+        width: 90%;
+    }
+    .card-front {
+        width: 90%;
+    }
+    .time {
+        margin-left: 16rem;
+    }
+    .time p {
+        font-size: 12px;
+    }
+    .cards-front-details {
+        margin: 10px 20px;
+    }
+    .cards-front-details h1 {
+        font-size: 20px;
+    }
+    .cards-front-details-name p {
+        font-size: 12px;
+    }
+    .back-number {
+        margin: 7rem 0 0 18rem;
+    }
+}
